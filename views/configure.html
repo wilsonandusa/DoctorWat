@@ -1,0 +1,28 @@
+<div style="padding:1em">
+  <form id="config">
+    <div style="min-height: 2em">
+      <div class="alert alert-success hidden">
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Storage path</label>
+      <div class="input-group">
+        <input name="storagePath" class="form-control" ng-model="storagePath">
+        <span class="input-group-btn">
+          <button class="btn btn-default" ng-click="selectDirectory()"> Choose </button>
+        </span>
+      </div>
+    </div>
+
+ <!--    <div class="form-group">
+      <label>Synchronization command</label>
+      <input name="syncCommand" class="form-control" ng-model="syncCommand">
+    </div> -->
+
+    <div class="form-group">
+      <button class="btn btn-default pull-right" ng-click="save()">
+        Save
+      </button>
+    </div>
+  </form>
+</div>

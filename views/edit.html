@@ -1,0 +1,9 @@
+<div class="btn-group" style="margin:1em">
+  <button class="btn btn-default code active" ng-click="goto('edit')">
+    <span class="icon icon-code"></span>
+  </button>
+  <button class="btn btn-default text-code text" ng-click="goto('view')">
+    <span class="icon icon-quote"></span>
+  </button>
+</div>
+<textarea id="text-edit" style="outline:none;width:100%;height:90%;padding:1em;" ng-model="global.buffer">{{buffer}}</textarea>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html  ng-app="woolfApp">
+  <head>
+    <title>👩🏻‍⚕️goodfellas👨🏻‍⚕️</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./css/photon.css">
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/section.css">
+    <link rel="stylesheet" href="./css/component.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- External Javascript -->
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script>window.$ = window.jQuery = require('./bower_components/jquery/dist/jquery.min.js');</script>
+
+    <!-- Internal Javascript -->
+    <script src="./js/common.js" charset="utf-8"></script>
+    <script src="./js/markdown.js"></script>
+    <script src="./js/app.js" charset="utf-8"></script>
+    <script src="./js/function.js"></script>
+
+  </head>
+  <body ng-controller="woolfController">
+    <div class="window">
+      <div class = 'function_section'>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="input-group">
+              <input id="search" type="text" class="form-control" placeholder="Search for...">
+              <span class="input-group-btn">
+                <button class="btn btn-secondary" type="button"
+                onclick='{google()}'>Search!</button>
+              </span>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="input-group">
+              <input id="search" type="text" class="form-control" placeholder="Search for...">
+              <span class="input-group-btn">
+                <button class="btn btn-secondary" type="button"
+                onclick='{database()}'>Go!</button>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="button_box">
+          <button type="button" class="btn btn-primary btn-lgk" onclick='{google("Ischemic Heart Disease")}'>Ischemic Heart Disease</button>
+          </div>
+          <div class="button_box">
+          <button type="button" class="btn btn-primary btn-lg" onclick='{google("Stroke")}'>Stroke</button>
+          </div>
+          <div class="button_box">
+          <button type="button" class="btn btn-primary btn-lg" onclick='{google("Chronic Obstructive Pulmonary Disease")}'>Chronic Obstructive Pulmonary Disease</button>
+          </div>
+          <div class="button_box">
+          <button type="button" class="btn btn-primary btn-lg" onclick='{google("Lower Respiratory Infections")}'>Lower Respiratory Infections</button>
+          </div>
+          <div class="button_box">
+          <button type="button" class="btn btn-primary btn-lg" onclick='{google("Lung Cancers")}'>Lung Cancers</button>
+          </div>
+
+          <div class="function_box">
+          <button type="button" class="btn btn-success btn-lg" onclick=''><i class="fa fa-camera" aria-hidden="true"></i>
+Camera</button>
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="button_box">
+            <button type="button" class="btn btn-primary btn-lg" onclick='{google("Diabetes")}'>Diabetes</button>
+          </div>
+          <div class="button_box">
+            <button type="button" class="btn btn-primary btn-lg" onclick='{google("StrPreterm Birth Complication")}'>Preterm Birth Complications</button>
+          </div>
+          <div class="button_box">
+            <button type="button" class="btn btn-primary btn-lg" onclick='{google("Tuberculosis")}'>Tuberculosis</button>
+          </div>
+          <div class="button_box">
+            <button type="button" class="btn btn-primary btn-lg" onclick='{google("HIV/AIDS")}'>HIV/AIDS</button>
+          </div>
+          <div class="button_box">
+            <button type="button" class="btn btn-primary btn-lg" onclick='{google("Diarrheal Diseases")}'>Diarrheal Diseases</button>
+          </div>
+          <div class="function_box">
+          <button type="button" class="btn btn-danger btn-lg" onclick=''><i class="fa fa-medkit" aria-hidden="true"></i>
+Contact</button>
+          </div>
+          <div class="function_box">
+            <button type="button" class="btn btn-warning">
+              Record
+              <i class="fa fa-microphone" aria-hidden="true"></i>
+              Notes
+            </button>
+          </div>
+
+          <div class="function_box">
+            <button type="button" class="btn btn-warning">
+              Record
+              <i class="fa fa-microphone" aria-hidden="true"></i>
+              Search
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="window-content">
+
+        <div class="pane-group">
+          <div class="pane pane-sm sidebar">
+            <ul class="list-group">
+              <!--
+              <li class="list-group-header">
+                <input class="form-control" type="text" placeholder="Search for anything.">
+              </li>
+               -->
+            </ul>
+            <nav class="nav-group" id="recent-files">
+              <h3 class="nav-group-title">Recent</h3>
+              <span style="color:#555555" class='nav-group-item' ng-class='{active : isFileNameSelected(file)}' ng-repeat="file in files" ng-click="loadFile(file)">{{file}}</span>
+            </nav>
+            <footer class="toolbar toolbar-footer" style="position:absolute;bottom:0px;width:100%;">
+              <div class="toolbar-actions">
+                <button class="btn btn-default">
+                  <span class="icon icon-cog" ng-click="goto('configure')"></span>
+                </button>
+              </div>
+            </footer>
+          </div>
+
+          <div class="pane">
+            <div ui-view style="height:100%">
+            </div>
+          </div>
+            <div class="search_section" id = 'search_result'>
+            </div>
+
+        </div>
+      </div>
+    </div>
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <script>if (window.module) module = window.module;</script>
+
+  </body>
+</html>
