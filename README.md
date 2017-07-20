@@ -1,14 +1,14 @@
-# Woolf 
-Woolf is a work journal for hackers.
+
 
 # Installation Instructions for Developers
 First of all, clone from master:
 ```bash
-git clone https://github.com/tjingrant/Woolf.git
+git clone https://github.com/wilsonandusa/doctorWat.git
 ```
 
 Then, install dependencies:
 ```bash
+sudo npm install bower -g 
 npm install
 bower install
 ```

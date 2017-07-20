@@ -1,0 +1,28 @@
+[
+  {
+    "id": "1",
+    "firstName": "Wilson",
+    "lastName": "Wu",
+    "age": 22,
+    "phone": "1234567890",
+    "heathHistory": "Super Healthy"
+
+  },
+  {
+    "id": "2",
+    "firstName": "Tian",
+    "lastName": "Jin",
+    "age": 22,
+    "phone": "1234567890",
+    "heathHistory": "Super Healthy"
+
+  },
+  {
+    "id": "3",
+    "firstName": "Mengting",
+    "lastName": "Yan",
+    "age": 21,
+    "phone": "1234567890",
+    "heathHistory": "Super Healthy"
+  }
+]

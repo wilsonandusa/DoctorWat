@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html  ng-app="woolfApp">
   <head>
-    <title>👩🏻‍⚕️goodfellas👨🏻‍⚕️</title>
+    <title>👩🏻‍⚕️DoctorWat👨🏻‍⚕️</title>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.css">
@@ -26,7 +26,7 @@
     <div class="window">
       <div class = 'function_section'>
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-lg-4">
             <div class="input-group">
               <input id="search" type="text" class="form-control" placeholder="Search for...">
               <span class="input-group-btn">
@@ -35,12 +35,15 @@
               </span>
             </div>
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-4">
+            <div class="msg-center" id="msg-center">No Message</div>
+          </div>
+          <div class="col-lg-4">
             <div class="input-group">
-              <input id="search" type="text" class="form-control" placeholder="Search for...">
+              <input id="data" type="text" class="form-control" placeholder="Patient ID...">
               <span class="input-group-btn">
                 <button class="btn btn-secondary" type="button"
-                onclick='{database()}'>Go!</button>
+                onclick='{patientID()}'><i class="fa fa-user-md fa-2x" aria-hidden="true"></i></button>
               </span>
             </div>
           </div>
@@ -63,7 +66,8 @@
           </div>
 
           <div class="function_box">
-          <button type="button" class="btn btn-success btn-lg" onclick=''><i class="fa fa-camera" aria-hidden="true"></i>
+          <button type="button" class="btn btn-success btn-lg"
+          onclick='{see()}'><i class="fa fa-camera" aria-hidden="true"></i>
 Camera</button>
           </div>
 
@@ -85,11 +89,13 @@ Camera</button>
             <button type="button" class="btn btn-primary btn-lg" onclick='{google("Diarrheal Diseases")}'>Diarrheal Diseases</button>
           </div>
           <div class="function_box">
+            <a href="mailto:wilsonandusa@gmail.com">
           <button type="button" class="btn btn-danger btn-lg" onclick=''><i class="fa fa-medkit" aria-hidden="true"></i>
-Contact</button>
+            Contact</button></a>
           </div>
           <div class="function_box">
-            <button type="button" class="btn btn-warning">
+            <button type="button" class="btn btn-warning"
+            onclick='{listen()}'>
               Record
               <i class="fa fa-microphone" aria-hidden="true"></i>
               Notes
@@ -97,10 +103,10 @@ Contact</button>
           </div>
 
           <div class="function_box">
-            <button type="button" class="btn btn-warning">
-              Record
-              <i class="fa fa-microphone" aria-hidden="true"></i>
-              Search
+            <button type="button" class="btn btn-info"
+            onclick='{analysis()}'>
+              <i class="fa fa-bar-chart" aria-hidden="true"></i>
+              Analysis
             </button>
           </div>
 
