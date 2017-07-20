@@ -2,7 +2,6 @@ var Crawler = require('crawler')
 var shell = require('electron').shell
 var terminal = require('shelljs')
 var data = require('./data.json')
-
 function patientID () {
   var patientID = document.getElementById('data').value
   for (var i = 0; i < data.length; i++) {
@@ -31,20 +30,20 @@ function patientID () {
 }
 function listen (link) {
   document.getElementById('msg-center').innerHTML = 'Please speak to the microphone...'
-  var child = terminal.exec('node tjBot.js', {async:true});
+  var child = terminal.exec('node ./speech_to_text/tjBot.js', {async:true});
   child.stdout.on('data', function(data) {
 
 })
 }
 function see (link) {
   document.getElementById('msg-center').innerHTML = 'Taking photo...'
-  var child = terminal.exec('node see.js', {async:true});
+  var child = terminal.exec('node ./speech_to_text/see.js', {async:true});
   child.stdout.on('data', function(data) {
   })
 }
 function analysis (link) {
   document.getElementById('msg-center').innerHTML = 'Taking photo...'
-  var child = terminal.exec('node analysis.js', {async:true});
+  var child = terminal.exec('node ./speech_to_text/analysis.js', {async:true});
   child.stdout.on('data', function(data) {
   })
 }
