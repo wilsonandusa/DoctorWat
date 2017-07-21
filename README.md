@@ -3,7 +3,7 @@
 
 HackDash link: [DoctorWat](https://hackdash.org/projects/597152357a30a4526a1fea12)
 ### Topic:
-Public health data is important for both industry and research projects, but it is hard for doctors to collect information from their patients when they are not in a hospital. Recording body condition at home involves searching information online, taking notes and getting medical help from doctors. Most applications require a laptop and only provides a few functions for patients.
+Public health data is important for both industry and research projects, but it is hard for doctors to collect information from their patients when they are not in a hospital. Recording data at home involves searching information online, taking notes and getting medical help from doctors. Most applications require a laptop and only provides a few functions for patients.
 
 ### Goal:
  To create a desktop application that can collect user data to reduce the information gap between doctors and patients. The application should be simple for both doctors and patients to use.
