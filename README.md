@@ -1,6 +1,7 @@
-# IBM 2017 Blue|Hack Project
-## Hackathon Challenge: [TJBot](https://ibmtjbot.github.io), Smart IOT
-## HackDash link: [DoctorWat](https://hackdash.org/projects/597152357a30a4526a1fea12)
+## IBM 2017 Blue|Hack Project
+ Hackathon Challenge: [TJBot](https://ibmtjbot.github.io), Smart IOT
+
+HackDash link: [DoctorWat](https://hackdash.org/projects/597152357a30a4526a1fea12)
 ### Topic:
 Public health data is important for both industry and research projects, but it is hard for doctors to collect information from their patients when they are not in a hospital. Recording body condition at home involves searching information online, taking notes and getting medical help from doctors. Most applications require a laptop and only provides a few functions for patients.
 
