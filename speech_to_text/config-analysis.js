@@ -7,11 +7,11 @@ User-specific configuration
 */
 
 // Create the credentials object for export
-exports.credentials = {}
+exports.credentials = {};
 
 // Watson Speech to Text
-// https://www.ibm.com/watson/developercloud/speech-to-text.html
-exports.credentials.speech_to_text = {
-  password: '5cad06ff-359e-4bf7-a4ee-4501cc91b535',
-  username: '65lbOtQsZTYc'
-}
+// https://www.ibm.com/watson/developercloud/tone-analyzer.html
+exports.credentials.tone_analyzer = {
+  password: '',
+  username: ''
+};

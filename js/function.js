@@ -2,6 +2,7 @@ var Crawler = require('crawler')
 var shell = require('electron').shell
 var terminal = require('shelljs')
 var data = require('./data.json')
+
 function patientID () {
   var patientID = document.getElementById('data').value
   for (var i = 0; i < data.length; i++) {
@@ -37,7 +38,23 @@ function listen (link) {
 }
 function see (link) {
   document.getElementById('msg-center').innerHTML = 'Taking photo...'
-  var child = terminal.exec('node ./speech_to_text/see.js', {async:true});
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+var yyyy = today.getFullYear();
+var hh = today.getHours()
+var min = today.getMinutes()
+var ss = today.getSeconds()
+if(dd<10) {
+    dd = '0'+dd
+} 
+
+if(mm<10) {
+    mm = '0'+mm
+} 
+
+today = yyyy + '-' +mm + '-' + dd + '-' + hh + '-' +min + '-' + ss
+  var child = terminal.exec('raspistill -o ' + today + '.jpg', {async:true});
   child.stdout.on('data', function(data) {
   })
 }
@@ -46,6 +63,10 @@ function analysis (link) {
   var child = terminal.exec('node ./speech_to_text/analysis.js', {async:true});
   child.stdout.on('data', function(data) {
   })
+}
+
+function email () {
+shell.openExternal("https://www.google.com/gmail/about/#")
 }
 function google (item) {
   document.getElementById('msg-center').innerHTML = 'Searching...'
