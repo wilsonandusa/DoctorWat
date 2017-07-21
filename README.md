@@ -17,8 +17,8 @@ First of all, clone from master:
 ```bash
 git clone https://github.com/wilsonandusa/DoctorWat.git
 ```
-
-Then, install dependencies:
+Since the TJBot library uses some of the C/C++ dependencies, we could not run it within electron, my solution is to seperate them into different folders, and install the tjBot dpendencies before the electron dependencies.  
+To install dependencies:
 ```bash
 # first install dependencies for the TJbot
 cd DoctorWat/speech_to_text
@@ -28,6 +28,8 @@ cd ..
 npm install
 bower install
 ```
+Don't forget to add your Bluemix services username&password(be careful about the order) in config files, here's a link to the [instructions](https://github.com/wilsonandusa/DoctorWat/tree/master/speech_to_text)
+
 
 To start the application, type:
 ```bash
