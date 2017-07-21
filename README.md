@@ -15,7 +15,7 @@ To use Watson API with TJBot, please first follow the [instructions](http://www.
 
 First of all, clone from master:
 ```bash
-git clone https://github.com/wilsonandusa/doctorWat.git
+git clone https://github.com/wilsonandusa/DoctorWat.git
 ```
 
 Then, install dependencies:
