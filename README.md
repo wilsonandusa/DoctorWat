@@ -21,7 +21,7 @@ git clone https://github.com/wilsonandusa/DoctorWat.git
 Then, install dependencies:
 ```bash
 # first install dependencies for the TJbot
-cd doctorWat/speech_to_text
+cd DoctorWat/speech_to_text
 npm install
 # then install dependencies for the electron
 cd ..
