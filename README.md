@@ -35,3 +35,5 @@ To start the application, type:
 ```bash
 npm start
 ```
+
+[![IMAGE ALT TEXT HERE](./bluehack.png)](https://www.youtube.com/watch?v=8t4sXKKVstY&t=25s)
